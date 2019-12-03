@@ -1,8 +1,8 @@
 ; day01: https://adventofcode.com/2019/day/1
 
-(ns aoc.d01.d01
+(ns aoc.d01
   (:require
-   [aoc.d01.data :refer [input]]
+   [aoc.d01-data :refer [input]]
    [clojure.string :as str]))
 
 
