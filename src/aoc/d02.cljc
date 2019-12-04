@@ -1,6 +1,6 @@
 ; day01: https://adventofcode.com/2019/day/2
 
-(ns aoc.d02
+ (ns aoc.d02
   (:require
    [aoc.d02-data :refer [input]]
    [clojure.string :as str]))
@@ -17,7 +17,6 @@
 (def l [99 1 2 3 4 5 6])
 
 (defn ans [data n]
-  (println data)
   (if (= 99 (nth data n))
     (nth data 0)
     (let [idx-a (nth data (+ n 1))
@@ -27,7 +26,6 @@
           idx (nth data (+ n 3))
           opcode (nth data n)
           new-n (+ n 4)]
-      (println a b idx-a idx-b)
       (if (= opcode 1)
         (ans (assoc data idx (+ a b)) new-n)
         (ans (assoc data idx (* a b)) new-n)))))
@@ -39,3 +37,19 @@
 
 
 ; Part Two
+; wip
+
+(def output 19690720)
+
+(time 
+ (for [x (range 0 2)
+       y (range 0 2)]
+  (let [data (assoc (vec data) 1 x 2 y)]
+    (if (= output (ans data 0))
+      (println x y)))))
+
+(time 
+ (ans (assoc (vec data) 1 1 2 1) 0))
+
+
+(ans (assoc (vec data) 1 0 2 0) 0)
