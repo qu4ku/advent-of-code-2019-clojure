@@ -1,4 +1,4 @@
-(ns aoc.d01.data)
+(ns aoc.d01-data)
 
 (def input "51753
 53456
