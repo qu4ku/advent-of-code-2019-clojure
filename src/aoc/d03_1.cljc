@@ -11,16 +11,6 @@
    (str/split-lines input)))
 (def data (read-data input))
 
-
-; generate points 
-  ; take two p
-; get points that are in boths sets
-; calculate manhatan distances
-; get smallest
-
-; (defn generate-line [point])
-
-
 (defn read-direction [command]
   (str (first command)))
 (defn read-distance [command]

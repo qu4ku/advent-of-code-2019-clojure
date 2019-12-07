@@ -1,6 +1,6 @@
 ; day01: https://adventofcode.com/2019/day/2
 
- (ns aoc.d02
+ (ns aoc.d02-2
   (:require
    [aoc.d02-data :refer [input]]
    [clojure.string :as str]))
@@ -27,13 +27,6 @@
         (ans (assoc data idx (+ a b)) new-n)
         (ans (assoc data idx (* a b)) new-n)))))
 
-(def test-data (map #(Integer/parseInt %) (str/split "1,9,10,3,2,3,11,0,99,30,40,50" #",")))
-(assert (= 3500 (ans (vec test-data) 0)))
-
-(ans alarm-data 0)  ; 2894520
-
-
-; Part Two
 (def output 19690720)
 
 (for [x (range 0 99)
