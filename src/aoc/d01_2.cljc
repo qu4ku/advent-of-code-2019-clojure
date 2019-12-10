@@ -1,4 +1,4 @@
-; day01: https://adventofcode.com/2019/day/1
+; day01-2: https://adventofcode.com/2019/day/1
 
 (ns aoc.d01-2
   (:require
