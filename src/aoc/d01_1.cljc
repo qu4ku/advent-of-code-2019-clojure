@@ -20,3 +20,9 @@
 (assert (= (fuel-required 2) 0))
 
 (reduce + (map fuel-required data)) ; 3373568
+
+
+; Alternative
+(->> data
+     (map fuel-required)
+     (reduce +))
